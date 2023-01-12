@@ -1,0 +1,36 @@
+{
+  "name": "takizawabot",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": {
+    "name": "yukidaruma",
+    "url": "https://github.com/yukidaruma"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=node",
+    "dev": "ts-node -r dotenv/config src/index",
+    "start": "node -r dotenv/config dist/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
+    "twitter-api-v2": "^1.12.9"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/node-cron": "^3.0.5",
+    "esbuild": "^0.15.13",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "volta": {
+    "node": "18.12.1"
+  }
+}
